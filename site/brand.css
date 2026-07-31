@@ -1,0 +1,333 @@
+/*
+ * brand.css — Sofia Smart Contracting rebrand.
+ *
+ * Loaded after dist/style.min.css so it overrides without touching the minified
+ * build. Everything here is either a colour swap or sizing for the new logo.
+ */
+
+:root {
+  --brand-bg: #3e3228;      /* splash background */
+  /* Light beige, sampled from the cream in the logo's wordmark so the badge
+     belongs to the same palette. */
+  --brand-accent: #f2e0c4;  /* Enter Site badge */
+  --brand-ink: #2a221c;     /* text on the accent */
+  --brand-overlay: .45;     /* strength of the black wash over the brown */
+  --brand-sweep: #b39a72;   /* beige band that travels through titles as they reveal */
+
+  /* Nav / menu palette. The build shipped three greens — a bright fill, a dark
+     foreground, and a deeper one for text sitting on the fill. Those literals
+     were swapped for these tokens in dist/style.min.css (original kept as
+     style.min.css.orig), so every use — including hover and pseudo-element
+     states — follows from here. */
+  --brand-nav-light: #c9ac82;   /* fills: phase circle, menu bars, contact button */
+  --brand-nav-dark:  #3e3228;   /* foreground: the "Menu" label, icon strokes */
+  --brand-nav-deep:  #2a221c;   /* text sitting on --brand-nav-light */
+}
+
+/* ---------- splash background ---------- */
+
+/* Black overlay sits on the brown as a second layer of the SAME element rather
+   than a separate ::after. The backdrop is drawn by .loadingScreen::before,
+   which is curtain-revealed with a scaleY transition — a sibling overlay would
+   need that animation duplicated and kept in sync, and would have to be
+   z-ordered under the logo and button. Layering it here avoids both. */
+.loadingScreen::before {
+  background-color: var(--brand-bg);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, var(--brand-overlay)),
+    rgba(0, 0, 0, var(--brand-overlay))
+  );
+}
+
+/* ---------- title reveal sweep ---------- */
+
+/* Titles reveal by sliding a gradient across the glyphs (background-clip: text,
+   animating background-position from 100% to 0%). The stock gradient carries a
+   bright yellow band in its middle, so a yellow highlight visibly travels through
+   the words as they appear.
+   Restating the gradient with a beige band in place of the yellow keeps that
+   travelling highlight, in the brand palette. Stop positions are copied exactly
+   from the originals; only the band colour changes.
+
+   Must be background-IMAGE, not the `background` shorthand: the animation depends
+   on background-size:250% and background-position, which are set in separate
+   rules, and the shorthand resets them to auto / 0% 0%. That kills the animation
+   while still looking correct in a static screenshot. */
+
+/* dark titles, on light backgrounds — this is the start screen headline */
+.phaseTitle .line .inner {
+  background-image: linear-gradient(90deg,
+    #261d26 45%,
+    var(--brand-sweep) 46%,
+    var(--brand-sweep) 54%,
+    rgba(38, 29, 38, .2) 55%);
+}
+
+/* light titles, over artwork */
+.phaseTitle--light .line .inner {
+  background-image: linear-gradient(90deg,
+    #fff 45%,
+    var(--brand-sweep) 46%,
+    var(--brand-sweep) 54%,
+    rgba(255, 255, 255, .2) 55%);
+}
+
+/* The two start-screen intro paragraphs reveal with the SAME clip-text sweep and
+   shipped the same yellow band. Restated with the beige band, matching the
+   headline. These sit over the dark scroll video, so the white base stays. */
+.startScreen__intro .line {
+  background-image: linear-gradient(90deg,
+    #fff 45%,
+    var(--brand-sweep) 46%,
+    var(--brand-sweep) 54%,
+    rgba(255, 255, 255, .2) 55%);
+}
+
+/* The highlighted opening phrase ("General contracting") should read in the brand
+   tan like the nav / Get in Touch button. Its parent .line sets text-fill
+   transparent for the sweep, so tan has to be forced back on with
+   text-fill-color, else the gradient shows through as the old yellow. */
+.startScreen__intro .label-wrap {
+  color: var(--brand-nav-light, #c9ac82);
+  -webkit-text-fill-color: var(--brand-nav-light, #c9ac82);
+}
+
+/* ---------- start screen subhead ---------- */
+
+/* One line, smaller type.
+   The wrap was coming from the fixed 52rem box, not the type size — unwrapped
+   the line is only ~71rem, so shrinking the font alone would still have wrapped.
+   The box is widened leftwards instead, keeping its right edge on the same
+   137rem margin as before, and the type drops 3rem -> 2.2rem.
+   Everything is in rem and the site scales rem with the viewport, so the
+   line-to-box ratio is constant and this holds at every desktop width. No
+   white-space:nowrap — if the copy is ever lengthened it should wrap rather
+   than run off the page. */
+/* Sits on the same line as "Scroll to explore" (.startScreen__scrollMessage,
+   top:53rem). Matching the two `top` values would NOT look aligned — that element
+   is 1.2rem type in a flex row centred on a 1.6rem icon, this is 2.2rem type, so
+   the boxes have different heights. The offset below centres this line box on the
+   scroll message's centre instead. */
+.startScreen__paragraph {
+  left: 63rem;
+  width: 74rem;
+  font-size: 2.2rem;
+  top: 52.5rem;
+}
+
+/* Restore the stock mobile layout, which the rule above would otherwise
+   override — one line is not achievable on a phone at any readable size.
+   Query copied verbatim from dist/style.min.css. */
+@media screen and (max-width: 640px), screen and (orientation: portrait) and (max-width: 1025px) {
+  .startScreen__paragraph {
+    left: 1.6rem;
+    top: calc(83vh - 12.5rem);
+    right: auto;
+    width: 33rem;
+    font-size: 2.4rem;
+  }
+}
+
+/* ---------- phase intro screens: header / paragraph hierarchy ---------- */
+
+/* The stock intro layout pins the big phase title top-left and its supporting
+   paragraph in the OPPOSITE bottom-right corner. On a wide screen that leaves a
+   ~500px void between them, so the two blocks read as unrelated rather than as a
+   heading and its sub-copy — no hierarchy.
+   Pulling the copy directly beneath the title, on the same left edge, puts the
+   title, paragraph, and "Scroll to explore" into one left-aligned column.
+
+   The paragraph is placed just below the title (top:44rem) on the same left edge.
+   Because both the title bottom (~40rem) and this top are in `rem`, they scale
+   together, so the 4rem gap holds at every width and the paragraph never rides up
+   into the title.
+   The one collision risk is the bottom-left "Scroll to explore" on a short window,
+   where the paragraph can reach the bottom of the screen. Rather than fight that
+   with viewport-height math, the scroll message is moved to the bottom-RIGHT: the
+   paragraph (left half) and the scroll line (right) are now on different sides and
+   simply cannot overlap, at any window shape.
+   Desktop only — the stock stacked mobile layout is left alone below 1026px. */
+@media screen and (min-width: 1026px) {
+  .introScreen .paragraph {
+    top: 44rem;
+    bottom: auto;
+    left: 4.7rem;
+    right: auto;
+    width: 52rem;
+  }
+  /* .scrolling-scoped so it out-specifies the stock `.scrolling
+     .introScreen__scrollMessage { left: 5.3rem }`; without the extra class the
+     left pin wins and the message stretches full-width back under the paragraph. */
+  .scrolling .introScreen__scrollMessage {
+    left: auto;
+    right: 6rem;
+  }
+}
+
+/* ---------- start screen headline ---------- */
+
+/* "Built on Trust, Driven by Excellence." is a much longer line than the
+   "Data Drives Our World." it replaces. On desktop it fits in three lines, but
+   on narrow screens the single word "Excellence." is 580px at the stock 9rem —
+   against a 390px viewport. No line-breaking fixes a single word, so the mobile
+   size is capped against the viewport instead; the 9rem stays in force as soon
+   as there is room for it. */
+.startScreen__title.u-showMobile {
+  font-size: min(9rem, 14.5vw);
+}
+
+/* ---------- scrim over light phase artwork ---------- */
+
+/* Every phase's copy is light — it was written against dark video. The Sofia
+   render sequence in phase 1 is near-white line work, which drops white text to
+   a 1.7:1 contrast ratio (4.5:1 is the readable threshold); measured, the
+   sketches need ~40% and the finished render ~8%.
+   .window__overlay already exists in the markup for this, shipped as
+   display:none. It sits inside .window (z-index auto) while the copy is in
+   .experience (z-index 1), so it darkens the artwork without touching the text.
+   Scoped by data-phase — set by two-way-scroll.js — so the dark video phases
+   are left alone. */
+:root { --phase1-scrim: .45; }
+
+html[data-phase="1"] .window__overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, var(--phase1-scrim));
+  pointer-events: none;
+}
+
+/* ---------- splash footer ---------- */
+
+/* The NRG legal links and copyright, built by addFooterLinks(). They all sit in
+   this one wrapper. display:none rather than opacity/visibility so the links —
+   which carry tabindex="0" — also leave the tab order. */
+.loadingScreen__footer { display: none; }
+
+/* ---------- Sofia logo on the splash ---------- */
+
+/* Centre the logo + badge as one group.
+
+   The stock layout can't do this: the lockup was a short, wide mark beside two
+   lines of type, and the Enter Site button was pinned separately at
+   calc(50vh + 4rem). The two were positioned independently, so with the taller
+   stacked artwork the pair ended up sitting well above centre (measured 222 →
+   602 in a 1000px viewport, a centre of 412 rather than 500).
+
+   Rather than nudge each by a hand-tuned offset — which only holds at one
+   viewport size — put them both in normal flow inside a centred flex column.
+   The group then centres itself at any height. */
+.loadingScreen__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingScreen__spinner {
+  align-items: center;
+  transform: none;
+  -webkit-transform: none;
+}
+
+/* Out of absolute positioning and into the column. The stock rules centred it
+   with left:50% + translateX(-50%); in flow that translate would shove it half
+   its own width to the left, so the entrance animation is restated on the Y
+   axis only. */
+.loadingScreen__button {
+  position: static;
+  top: auto;
+  left: auto;
+  margin-top: 4rem;
+  transform: translate3d(0, 1.5rem, 0);
+  -webkit-transform: translate3d(0, 1.5rem, 0);
+}
+
+html.loaded:not(.cookie-entry) .loadingScreen__button {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.loadingScreen__logo {
+  height: 30rem;
+  /* Never let the lockup plus the badge outgrow a short window — the group is
+     flex-centred, so overflow would clip it top and bottom rather than scroll. */
+  max-height: 55vh;
+  width: auto;
+  max-width: 80vw;
+  opacity: 0;   /* matches the svg it replaced; revealed on html.loaded below */
+}
+
+html.loaded .loadingScreen__spinner .loadingScreen__logo {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+/* The exit animation targets .loadingScreen__spinner as a whole, so the image
+   rides along with it and needs no separate rule. */
+
+@media (max-width: 900px) {
+  /* The stock mobile rule re-applies a translate to the spinner; null it here
+     too or the group drifts off centre on small screens. */
+  .loadingScreen__spinner {
+    transform: none;
+    -webkit-transform: none;
+  }
+  .loadingScreen__logo { height: 21rem; }
+  .loadingScreen__button { margin-top: 3rem; }
+}
+
+/* ---------- Sofia mark in the nav ---------- */
+
+/* A horizontal lockup — mark left, wordmark right — so the nav carries the full
+   name rather than just the fingerprint.
+   Two pre-coloured copies cross-fade instead of a CSS filter: the source is pale
+   gold, and no filter takes it to something that reads on the near-white content
+   background without going muddy. .menu-dark is the app's own "the nav is
+   sitting over dark artwork" signal. */
+.nav__logo { position: relative; height: 5.4rem; width: auto; }
+
+.nav__logoImg {
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+  transition: opacity .2s;
+  -webkit-transition: opacity .2s;
+}
+
+.nav__logoImg--onDark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+html:not(.menu-dark) .nav__logoImg--onLight { opacity: 1; }
+html:not(.menu-dark) .nav__logoImg--onDark  { opacity: 0; }
+html.menu-dark .nav__logoImg--onLight { opacity: 0; }
+html.menu-dark .nav__logoImg--onDark  { opacity: 1; }
+
+/* ---------- Enter Site badge ---------- */
+
+.yellowButton {
+  background-color: var(--brand-accent);
+  border-color: var(--brand-accent);
+  color: var(--brand-ink);
+}
+
+.yellowButton:hover { background-color: rgba(242, 224, 196, .8); }
+.yellowButton:focus-visible { outline: 4px solid var(--brand-accent); }
+
+.loadingScreen__button { color: var(--brand-ink); }
+
+/* The badge's loading sweep was keyed to the old yellow. */
+.loadingScreen__button::before {
+  background-image: linear-gradient(90deg, var(--brand-accent) 50%, rgba(62, 50, 40, .2) 50%);
+}
+
+/* Focus rings elsewhere in the UI reused the same yellow. */
+.nav__logo:focus-visible { outline: 4px solid var(--brand-accent); }

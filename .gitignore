@@ -1,0 +1,11 @@
+# dependencies (regenerated with: cd _tools && npm install)
+_tools/node_modules/
+
+# macOS
+.DS_Store
+
+# local safety backups (kept on disk, not in the repo)
+*.bak
+*.bak2
+*.orig
+*.bak-yellow

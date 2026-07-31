@@ -1,0 +1,1115 @@
+{
+ "labels": {
+  "baseOffering": "Core Scope",
+  "additionalOffering": "Self-Delivered",
+  "scrollMessage": "Scroll to explore"
+ },
+ "phases": [
+  {
+   "type": "explore",
+   "menuLink": "Design & Feasibility",
+   "media": "phase1",
+   "screens": [
+    {
+     "type": "intro",
+     "frame": [
+      1
+     ],
+     "badge": "Phase 1",
+     "phaseTitle": [
+      "Design &",
+      "Feasibility"
+     ],
+     "pageLoad": "1siteevaluation",
+     "large": "In Phase 1, Sofia works with the client to understand the brief, assess the site, develop the design, and confirm the budget and approvals needed to build.",
+     "media": "phase1"
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      2
+     ],
+     "pageLoad": "1siteevaluation:step1",
+     "screenSummary": "Confirm the essentials: the client's brief, the site conditions, and a clear budget.",
+     "nodes": [
+      {
+       "pos": [
+        45,
+        45
+       ],
+       "title": "Client Brief",
+       "linkClick": "SiteEvaluation:FiberConnection",
+       "board": "/images/boards/01_FIBER_CONNECTION_2.png",
+       "boardAlt": "",
+       "content": "Sit down with the client to capture the vision, requirements, and priorities for the project."
+      },
+      {
+       "pos": [
+        63,
+        62
+       ],
+       "title": "Site Survey",
+       "linkClick": "SiteEvaluation:WaterSupply",
+       "board": "/images/boards/03_WATER_SUPPLY.png",
+       "boardAlt": "",
+       "content": "Survey the plot for levels, soil, boundaries, and existing services, to understand exactly what we're building on."
+      },
+      {
+       "pos": [
+        28,
+        28
+       ],
+       "title": "In-House Design",
+       "linkClick": "SiteEvaluation:GasSupply",
+       "board": "/images/boards/02_GAS_SUPPLY.png",
+       "boardAlt": "",
+       "content": "Sofia's own design and engineering team develops the drawings, 3D visuals, and specifications in-house, keeping design and build under one roof.",
+       "onsite": true
+      }
+     ],
+     "media": "phase1"
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      3
+     ],
+     "pageLoad": "1siteevaluation:step2",
+     "screenSummary": "Start early on cost, programme, and the authority approvals every UAE project needs.",
+     "nodes": [
+      {
+       "pos": [
+        62,
+        38
+       ],
+       "title": "Project Programme",
+       "linkClick": "SiteEvaluation:LoadRampPlan",
+       "board": "/images/boards/07_LOAD_RAMP_PLAN.png",
+       "boardAlt": "",
+       "content": "Set out the construction stages and timeline so every trade and delivery is sequenced from day one."
+      },
+      {
+       "pos": [
+        5,
+        63
+       ],
+       "title": "Authority Engagement",
+       "linkClick": "SiteEvaluation:TSPEngagement",
+       "board": "/images/boards/05_TSP_ENGAGEMENT.png",
+       "boardAlt": "",
+       "content": "Engage early with the municipality, civil defence, and utility providers (DEWA / ADDC) to confirm what each will require."
+      },
+      {
+       "pos": [
+        45,
+        20
+       ],
+       "title": "Cost Plan & Estimate",
+       "linkClick": "SiteEvaluation:PreApplicationReview",
+       "board": "/images/boards/06_PRE_APPLICATION_REVIEW.png",
+       "boardAlt": "",
+       "content": "Price the works in detail: a transparent cost plan the client can rely on before committing to build."
+      },
+      {
+       "pos": [
+        50,
+        60
+       ],
+       "title": "Value Engineering",
+       "linkClick": "SiteEvaluation:TurbineReservation",
+       "board": "/images/boards/04_TURBINE_RESERVATION.png",
+       "boardAlt": "",
+       "content": "Sofia reviews the design for smarter methods, materials, and sequencing that protect quality while reducing cost and time.",
+       "onsite": true
+      }
+     ],
+     "media": "phase1"
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      4
+     ],
+     "pageLoad": "1siteevaluation:step3",
+     "screenSummary": "Confirm the design, approvals, and sustainability goals before breaking ground.",
+     "nodes": [
+      {
+       "pos": [
+        37,
+        65
+       ],
+       "title": "Design Approvals",
+       "linkClick": "SiteEvaluation:",
+       "board": "/images/boards/09_LAND_ENVIRONMENTAL_EVALUATION.png",
+       "boardAlt": "",
+       "content": "Submit the design for building permit and authority approvals, and resolve comments to reach a permit to build."
+      },
+      {
+       "pos": [
+        24,
+        39
+       ],
+       "title": "Sustainable Design",
+       "linkClick": "SiteEvaluation:LowCarbonRequirement",
+       "board": "/images/boards/11_LOW_CARBON_REQUIREMENT.png",
+       "boardAlt": "",
+       "content": "Set the client's sustainability goals, whether Estidama Pearl, LEED, or energy efficiency, and build them into the design.",
+       "deepDive": "LowerCarbonPathways",
+       "deepDiveLabel": "Learn How"
+      },
+      {
+       "pos": [
+        50,
+        50
+       ],
+       "title": "Approvals & NOCs",
+       "board": "/images/boards/00_COMMUNITY.png",
+       "boardAlt": "",
+       "content": "Coordinate NOCs and clearances from every stakeholder, including utilities, telecoms, and neighbouring plots, to keep the programme moving."
+      },
+      {
+       "pos": [
+        35,
+        20
+       ],
+       "title": "Method Statements",
+       "linkClick": "SiteEvaluation:AirPermittin",
+       "board": "/images/boards/10_AIR_PERMITTING.png",
+       "boardAlt": "",
+       "content": "Sofia prepares construction method statements and risk assessments in-house so work starts safely and to spec.",
+       "onsite": true
+      },
+      {
+       "pos": [
+        65,
+        35
+       ],
+       "title": "Site Investigation",
+       "linkClick": "SiteEvaluation:CCS Studies",
+       "board": "/images/boards/08_CCS_STUDIES.png",
+       "boardAlt": "",
+       "content": "Where needed, Sofia carries out soil and geotechnical investigation to confirm the foundation design before construction.",
+       "onsite": true
+      }
+     ],
+     "media": "phase1"
+    },
+    {
+     "type": "exit",
+     "frame": [
+      5
+     ],
+     "button": "Scroll to Phase 2",
+     "media": "phase1"
+    }
+   ]
+  },
+  {
+   "type": "scroll",
+   "menuLink": "Approvals & Procurement",
+   "button": "Scroll to Phase 3",
+   "pageLoad": "2sitedevelopment",
+   "screens": [
+    {
+     "type": "introScreen",
+     "badge": "Phase 2",
+     "phaseTitle": [
+      "Approvals &",
+      "Procurement"
+     ],
+     "large": "In Phase 2, permits are secured and the supply chain is built, awarding trades and ordering materials so construction can start on time."
+    },
+    {
+     "type": "nodeDotPoints",
+     "media": "phase2_top",
+     "badge": "Authority Approvals",
+     "isFlipped": false,
+     "blocks": [
+      {
+       "frame": [
+        1
+       ],
+       "heading": "Building Permit Application",
+       "pageLoad": "2sitedevelopment:gridconnectedsolution",
+       "content": "Submit the approved design to the municipality for a building permit, with all drawings and calculations."
+      },
+      {
+       "frame": [
+        2
+       ],
+       "heading": "Utility Applications",
+       "pageLoad": "2sitedevelopment:gridconnectedsolution",
+       "content": "Apply to DEWA / ADDC and telecom providers for the power, water, and connectivity the project will need."
+      },
+      {
+       "frame": [
+        3
+       ],
+       "heading": "Authority Approvals Secured",
+       "pageLoad": "2sitedevelopment:gridconnectedsolution",
+       "content": "Civil defence, municipality, and utility approvals are issued and fees settled, clearing the way to build."
+      },
+      {
+       "frame": [
+        4
+       ],
+       "heading": "Long-Lead Procurement",
+       "pageLoad": "2sitedevelopment:gridconnectedsolution",
+       "content": "Order long-lead items early, from lifts and chillers to façade and bespoke joinery, so they never hold up the programme."
+      },
+      {
+       "frame": [
+        5
+       ],
+       "heading": "Contracts & Insurances",
+       "pageLoad": "2sitedevelopment:gridconnectedsolution",
+       "content": "Put the main contract, warranties, and project insurances in place, confirming scope and responsibility for all parties."
+      }
+     ]
+    },
+    {
+     "type": "breakHeading",
+     "icon": "/ui/bolt.svg",
+     "iconAlt": "Lightning Bolt Icon",
+     "heading": "Building the supply chain:"
+    },
+    {
+     "type": "nodeDotPoints",
+     "media": "phase2_bottom",
+     "badge": "Procurement & Subcontracts",
+     "isFlipped": true,
+     "blocks": [
+      {
+       "frame": [
+        1
+       ],
+       "heading": "Trade Package Scoping",
+       "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+       "content": "Break the works into clear trade packages for structure, MEP, façade, and finishes, ready to tender."
+      },
+      {
+       "frame": [
+        2
+       ],
+       "heading": "Tender & Award",
+       "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+       "content": "Invite trusted subcontractors to tender, compare on price and capability, and award each package."
+      },
+      {
+       "frame": [
+        3
+       ],
+       "heading": "Subcontractor Onboarding",
+       "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+       "content": "Vet and onboard each subcontractor for track record, safety, and capacity, then sign the trade contracts."
+      },
+      {
+       "frame": [
+        4
+       ],
+       "heading": "Material Procurement",
+       "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+       "content": "Finalise orders for key materials and equipment, locking in prices and delivery dates against the programme."
+      }
+     ]
+    },
+    {
+     "type": "deepDiveFeature",
+     "heading": "Enabling Works",
+     "content": "Sofia can start early with enabling works like site setup, hoarding, temporary services, and shoring, so groundworks begin the moment approvals land.",
+     "pageLoad": "2Sitedevelopment:bridgepowersolution",
+     "buttonLabel": "Explore Enabling Works",
+     "deepDive": "BridgePower"
+    }
+   ]
+  },
+  {
+   "type": "explore",
+   "menuLink": "Construction",
+   "media": "phase3",
+   "screens": [
+    {
+     "type": "intro",
+     "frame": [
+      2
+     ],
+     "badge": "Phase 3",
+     "phaseTitle": [
+      "Construction"
+     ],
+     "pageLoad": "3construction",
+     "large": "In Phase 3, Sofia mobilises on site and builds, from foundations and structure to the building envelope, with quality and safety managed daily."
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      4.2,
+      6.0
+     ],
+     "pageLoad": "3construction:step1",
+     "screenSummary": "Break ground: set out the site, build the foundations, and raise the main structure.",
+     "nodes": [
+      {
+       "pos": [
+        40,
+        45
+       ],
+       "title": "Foundations & Substructure",
+       "linkClick": "Construction:",
+       "board": "/images/boards/12_LOAD_INTERCONNECTION_COORDINATION.png",
+       "boardAlt": "",
+       "content": "Excavate, lay foundations, and build the substructure, the base every project depends on, set out and checked to the millimetre."
+      },
+      {
+       "pos": [
+        63,
+        30
+       ],
+       "title": "Main Structure",
+       "linkClick": "Construction:",
+       "board": "/images/boards/13_ONSITE_GENERATION_CONSTRUCTION.png",
+       "boardAlt": "",
+       "content": "Sofia's own crews raise the main structure, from concrete frame to columns and slabs, self-delivered for full control over quality and pace.",
+       "onsite": true
+      }
+     ]
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      9.2,
+      10.2
+     ],
+     "pageLoad": "3construction:step2",
+     "screenSummary": "Enclose the building: structure, envelope, and first-fix services take shape.",
+     "nodes": [
+      {
+       "pos": [
+        25,
+        25
+       ],
+       "title": "Site Mobilisation",
+       "linkClick": "Construction:SiteMobilization",
+       "board": "/images/boards/15_SITE_MOBILIZATION.png",
+       "boardAlt": "",
+       "content": "Sofia sets up the site with crews, plant, welfare, and safety, and gets materials flowing to the workface.",
+       "onsite": true
+      },
+      {
+       "pos": [
+        55,
+        26
+       ],
+       "title": "Blockwork & Partitions",
+       "linkClick": "Construction:DataHallConstruction",
+       "board": "/images/boards/14_DATA_HALL_CONSTRUCTION.png",
+       "boardAlt": "",
+       "content": "Subcontractors build internal and external walls, defining every room and space within the structure."
+      },
+      {
+       "pos": [
+        72,
+        45
+       ],
+       "title": "MEP First Fix",
+       "linkClick": "Construction:GasInfrastructure",
+       "board": "/images/boards/18_GAS_INFRASTRUCTURE.png",
+       "boardAlt": "",
+       "content": "Mechanical, electrical, and plumbing services are routed through the structure, the hidden network behind every wall and ceiling.",
+       "deepDive": "GasCapabilities",
+       "deepDiveLabel": "Explore Capabilities",
+       "onsite": true
+      },
+      {
+       "pos": [
+        20,
+        53
+       ],
+       "title": "Material Delivery",
+       "linkClick": "Construction:EquipmentDelivery",
+       "board": "/images/boards/17_EQUIPMENT_DELIVERY.png",
+       "boardAlt": "",
+       "content": "Sofia coordinates deliveries of key materials and equipment to site, just in time for each stage of work.",
+       "onsite": true
+      },
+      {
+       "pos": [
+        50,
+        57
+       ],
+       "title": "Envelope & Façade",
+       "linkClick": "Construction:ShellConstructionFacilities",
+       "board": "/images/boards/16_SHELL_CONSTRUCTION_FACILITIES.png",
+       "boardAlt": "",
+       "content": "The building envelope goes up with roofing, cladding, windows, and façade, sealing the structure against the weather."
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "frame": [
+      13.0,
+      15
+     ],
+     "button": "Scroll to Phase 4"
+    }
+   ]
+  },
+  {
+   "type": "horizontal",
+   "menuLink": "Fit-Out & Finishes",
+   "button": "Scroll to Power Up",
+   "pageLoad": "4powerrampup",
+   "screens": [
+    {
+     "type": "introScreen",
+     "badge": "Phase 4",
+     "phaseTitle": [
+      "Fit-Out",
+      "& Finishes"
+     ],
+     "large": "In Phase 4, the building is fitted out: services completed, finishes installed, and every system tested and commissioned."
+    },
+    {
+     "type": "imageBreak",
+     "media": "phase4"
+    },
+    {
+     "type": "nodeDotRail",
+     "toggle1": "Main Contract Works",
+     "toggle2": "Specialist Fit-Out",
+     "blocks": [
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "01",
+       "heading": "MEP Second Fix",
+       "content": "With walls and ceilings closed up, MEP teams install fixtures and terminals: sockets, lights, taps, and grilles."
+      },
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "",
+       "heading": "Temporary Services (Optional)",
+       "content": "Where needed, temporary power and water keep fit-out moving until permanent services are energised."
+      },
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "02",
+       "heading": "Internal Finishes",
+       "content": "Plaster, paint, flooring, tiling, and joinery bring each space to life, room by room."
+      },
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "03",
+       "heading": "Utilities Energised",
+       "content": "Permanent power and water are connected and live, and the building runs on its own services."
+      },
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "04",
+       "heading": "Testing & Commissioning",
+       "content": "Every system, from electrical and HVAC to plumbing and life-safety, is tested and commissioned to prove it performs."
+      },
+      {
+       "onsite": true,
+       "pageLoad": "4powerrampup:onsitegeneration",
+       "number": "05",
+       "heading": "External Works & Landscaping",
+       "content": "Driveways, hardscaping, pools, and landscaping complete the setting around the finished building."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "explore",
+   "menuLink": "Handover & Aftercare",
+   "media": "phase5",
+   "screens": [
+    {
+     "type": "intro",
+     "frame": [
+      2.65
+     ],
+     "badge": "Phase 5",
+     "phaseTitle": [
+      "Handover &",
+      "Aftercare"
+     ],
+     "pageLoad": "5fullyoperational",
+     "large": "In Phase 5, the project is snagged, cleaned, and handed over, and Sofia stays on for warranty and aftercare."
+    },
+    {
+     "type": "nodes",
+     "frame": [
+      2.65,
+      3.65
+     ],
+     "pageLoad": "5fullyoperational:step1",
+     "screenSummary": "Hand over a finished project: snag-free, certified, and backed by ongoing support.",
+     "nodes": [
+      {
+       "pos": [
+        72,
+        33
+       ],
+       "title": "Aftercare & Maintenance",
+       "linkClick": "FullyOperational:RetailPowerSupport",
+       "board": "/images/boards/20_RETAIL_POWER_SUPPORT.png",
+       "boardAlt": "",
+       "content": "Sofia stays on after handover, with a defects-liability warranty and optional maintenance to keep the building in top condition.",
+       "deepDive": "RetailOfferings",
+       "deepDiveLabel": "Explore Offerings"
+      },
+      {
+       "pos": [
+        45,
+        55
+       ],
+       "title": "Sustainability Delivered",
+       "linkClick": "FullyOperational:Low-CarbonPath",
+       "board": "/images/boards/19_LOW_CARBON_PATH.png",
+       "boardAlt": "",
+       "content": "The sustainability targets set at design, from Estidama and LEED to efficiency, are verified and certified at completion.",
+       "deepDive": "LowerCarbonPathways",
+       "deepDiveLabel": "Learn How"
+      },
+      {
+       "pos": [
+        42,
+        30
+       ],
+       "title": "Snagging & Handover",
+       "linkClick": "FullyOperational:GasGridRetail",
+       "board": "/images/boards/21_GAS_GRID_RETAIL_2.png",
+       "boardAlt": "",
+       "content": "Sofia's team walks the project, closes every snag, and hands over keys, warranties, and O&M manuals to the client.",
+       "onsite": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "type": "scroll",
+   "isStatic": true,
+   "menuLink": "Project Tour",
+   "button": "Scroll to take a tour",
+   "pageLoad": "6virtualtour",
+   "screens": [
+    {
+     "type": "introScreen",
+     "frame": [
+      0
+     ],
+     "media": "phase5_tour",
+     "badge": "Take a tour",
+     "phaseTitle": [
+      "Explore Your",
+      "Project"
+     ],
+     "large": "The project is complete and handed over. Step inside to see how everything comes together, from structure and finishes to systems, comfort, and sustainability."
+    }
+   ]
+  },
+  {
+   "type": "explore",
+   "media": "phase5_tour",
+   "screens": [
+    {
+     "type": "nodes",
+     "media": "phase5_tour",
+     "frame": [
+      0
+     ],
+     "screenSummary": "",
+     "isTour": true,
+     "pageLoad": "6virtualtour:takeatour",
+     "nodes": [
+      {
+       "pos": [
+        46,
+        45
+       ],
+       "title": "Security & Smart Home",
+       "tourLocation": "Security"
+      },
+      {
+       "pos": [
+        39,
+        33
+       ],
+       "title": "Cooling & Climate",
+       "tourLocation": "Cooling"
+      },
+      {
+       "pos": [
+        80,
+        36
+       ],
+       "title": "Power & Connectivity",
+       "tourLocation": "Power"
+      },
+      {
+       "pos": [
+        59,
+        59
+       ],
+       "title": "Backup & Resilience",
+       "tourLocation": "Battery"
+      },
+      {
+       "pos": [
+        69,
+        25
+       ],
+       "title": "Living & Working Spaces",
+       "tourLocation": "Operations"
+      },
+      {
+       "pos": [
+        38,
+        64
+       ],
+       "title": "Sustainability & Water",
+       "tourLocation": "Sustainability"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "tour": {
+  "Security": {
+   "thumb": "/images/security_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    0,
+    3.2,
+    5.0,
+    8.2
+   ],
+   "pageLoad": "6virtualtour:security",
+   "blocks": [
+    {
+     "heading": "Security & Access",
+     "id": "securi",
+     "content": "Layered security, from access control and CCTV to smart-home integration, keeps the building and everyone in it safe."
+    },
+    {
+     "heading": "Smart Building Systems",
+     "id": "datahs",
+     "content": "Building-management systems tie lighting, climate, and security together, controllable from a single dashboard."
+    }
+   ]
+  },
+  "Cooling": {
+   "thumb": "/images/cooling_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    8.6,
+    9.7,
+    11.6,
+    12.7
+   ],
+   "pageLoad": "6virtualtour:cooling",
+   "blocks": [
+    {
+     "heading": "HVAC & Airflow",
+     "id": "hvaca",
+     "content": "HVAC systems circulate and filter fresh air, holding a comfortable, healthy climate throughout the building."
+    },
+    {
+     "heading": "Cooling Systems",
+     "id": "cools",
+     "content": "Efficient chillers and air-conditioning keep every room at the right temperature, even in peak UAE summer heat."
+    }
+   ]
+  },
+  "Power": {
+   "thumb": "/images/power_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    13.1,
+    14.2,
+    16.1,
+    17.2
+   ],
+   "pageLoad": "6virtualtour:power",
+   "blocks": [
+    {
+     "heading": "Power Distribution",
+     "id": "gridi",
+     "content": "This is where utility power enters the building and is distributed safely to every circuit, panel, and room."
+    },
+    {
+     "heading": "Connectivity & Fibre",
+     "id": "fiberc",
+     "content": "High-speed fibre and structured cabling connect the building to the world, carrying internet, TV, and smart devices throughout."
+    }
+   ]
+  },
+  "Battery": {
+   "thumb": "/images/battery_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    18.0,
+    19.0,
+    19.9,
+    21.0
+   ],
+   "pageLoad": "6virtualtour:battery",
+   "blocks": [
+    {
+     "heading": "Backup Power",
+     "id": "batts",
+     "content": "Standby generators and UPS stand ready to keep essential systems running the moment mains power drops."
+    },
+    {
+     "heading": "Energy Management",
+     "id": "powerm",
+     "content": "Smart metering and controls balance loads and trim consumption, for lower bills and a lighter footprint."
+    }
+   ]
+  },
+  "Operations": {
+   "thumb": "/images/operations_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    21.8,
+    23.55,
+    24.85,
+    26.6
+   ],
+   "pageLoad": "6virtualtour:operations",
+   "blocks": [
+    {
+     "heading": "Living & Working Spaces",
+     "id": "onsites",
+     "content": "Bedrooms, offices, kitchens, and majlis are finished and furnished, spaces designed around how people actually live and work."
+    },
+    {
+     "heading": "Comfort & Detailing",
+     "id": "controlr",
+     "content": "It's the details that make a space: level floors, crisp joinery, and finishes that feel right underfoot and to the touch."
+    }
+   ]
+  },
+  "Sustainability": {
+   "thumb": "/images/water_img.jpg",
+   "media": "phase5_tour",
+   "frames": [
+    27.1,
+    28.1,
+    29.0,
+    30.1
+   ],
+   "pageLoad": "6virtualtour:water",
+   "blocks": [
+    {
+     "heading": "Sustainability",
+     "id": "sust",
+     "content": "Solar panels, efficient systems, and smart controls cut energy use, for an Estidama-minded building that costs less to run."
+    },
+    {
+     "heading": "Water & Efficiency",
+     "id": "waterp",
+     "content": "Low-flow fixtures and greywater reuse cut water waste, with irrigation tuned for a desert climate."
+    }
+   ]
+  }
+ },
+ "deepDives": {
+  "LowerCarbonPathways": {
+   "title": "Sustainable Building Options",
+   "intro": "",
+   "color": "#b39a72",
+   "pageLoad": "deepdive:lowercarbonpathways",
+   "blocks": [
+    {
+     "type": "accordion",
+     "id": "lc1",
+     "heading": "Estidama Pearl Rating",
+     "content": "Design and build to the UAE's Estidama Pearl Rating System, hitting the sustainability targets set for the project."
+    },
+    {
+     "type": "accordion",
+     "id": "lc2",
+     "heading": "LEED Certification",
+     "content": "Deliver to LEED standards where the client wants globally recognised green-building certification."
+    },
+    {
+     "type": "accordion",
+     "id": "lc3",
+     "heading": "Energy-Efficient MEP",
+     "content": "High-efficiency chillers, LED lighting, and smart controls that cut running costs for the life of the building."
+    },
+    {
+     "type": "accordion",
+     "id": "lc4",
+     "heading": "Solar PV & Battery",
+     "content": "Rooftop solar and battery storage to generate clean power on site and reduce reliance on the grid."
+    },
+    {
+     "type": "accordion",
+     "id": "lc5",
+     "heading": "Sustainable Materials",
+     "content": "Low-carbon concrete, responsibly sourced timber, and regional materials that lower the project's footprint."
+    },
+    {
+     "type": "accordion",
+     "id": "lc6",
+     "heading": "Water Efficiency",
+     "content": "Low-flow fixtures, greywater reuse, and climate-tuned irrigation to save water in a desert environment."
+    },
+    {
+     "type": "accordion",
+     "id": "lc7",
+     "heading": "Smart Building Management",
+     "content": "A building-management system that monitors and optimises energy and water use automatically, day and night."
+    }
+   ]
+  },
+  "BridgePower": {
+   "title": "Enabling Works",
+   "intro": "Start early with enabling works so groundworks begin the moment approvals are in hand",
+   "color": "#b39a72",
+   "pageLoad": "deepdive:bridgepowersolutions",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Enabling works Sofia can self-deliver",
+     "rows": [
+      [
+       "Early Start",
+       "Groundworks can begin the moment the building permit is issued"
+      ],
+      [
+       "Scope",
+       "Site clearance, hoarding, shoring, dewatering, and temporary services"
+      ],
+      [
+       "Programme",
+       "Runs in parallel with procurement to compress the overall schedule"
+      ],
+      [
+       "Delivery",
+       "Self-performed by Sofia's own crews for full control of cost and pace"
+      ]
+     ]
+    }
+   ]
+  },
+  "GasCapabilities": {
+   "title": "Sofia's Self-Delivery Capabilities",
+   "intro": "Sofia self-performs core trades with its own crews and equipment, keeping quality, cost, and programme under one roof across residential and commercial projects.",
+   "color": "#b39a72",
+   "pageLoad": "deepdive:gascapabilities",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "",
+     "rows": [
+      [
+       "Concrete & Structure:",
+       "In-house crews for foundations, concrete frames, and structural works."
+      ],
+      [
+       "Blockwork & Finishes:",
+       "Directly delivered masonry, plaster, and finishing trades."
+      ],
+      [
+       "MEP Coordination:",
+       "Managed mechanical, electrical, and plumbing works across every discipline."
+      ],
+      [
+       "Direct Labour:",
+       "Our own skilled workforce means fewer handoffs and tighter control on site."
+      ],
+      [
+       "Cost Certainty:",
+       "Self-delivery removes subcontractor mark-ups and reduces the risk of delay claims."
+      ]
+     ]
+    },
+    {
+     "type": "textblock",
+     "title": "Projects across the UAE",
+     "content": "From villas and residential compounds to commercial and retail fit-out, Sofia delivers projects across the Emirates."
+    }
+   ]
+  },
+  "RetailOfferings": {
+   "title": "Aftercare & Maintenance",
+   "intro": "Ongoing support after handover, from the defects-liability period to long-term maintenance",
+   "color": "#b39a72",
+   "pageLoad": "deepdive:retailofferings",
+   "blocks": [
+    {
+     "type": "table",
+     "title": "Support tailored to how the client uses the building:",
+     "rows": [
+      [
+       "Defects Liability:",
+       "A warranty period after handover during which Sofia fixes any defects at no cost."
+      ],
+      [
+       "Maintenance Contracts:",
+       "Optional annual maintenance covering MEP servicing, HVAC, and general upkeep."
+      ],
+      [
+       "Warranties & O&M:",
+       "Manufacturer warranties and operation & maintenance manuals handed over in full."
+      ],
+      [
+       "Responsive Callouts:",
+       "A single point of contact for snags and callouts long after the keys are handed over."
+      ]
+     ]
+    }
+   ]
+  },
+  "Onsite": {
+   "title": "What is Self-Delivery",
+   "intro": "",
+   "color": "#b39a72",
+   "blocks": [
+    {
+     "type": "textblock",
+     "title": "",
+     "content": "Self-delivery means Sofia performs the work directly with its own in-house crews, plant, and equipment, rather than passing it to a subcontractor. <br><br> Keeping core trades in-house gives tighter control over quality, cost, and programme, and fewer handoffs on site."
+    }
+   ]
+  },
+  "Contact": {
+   "title": "Ready to build with Sofia?",
+   "intro": "Whatever you need, we'll help you get it done.",
+   "color": "#b39a72",
+   "pageLoad": "7getIntouch",
+   "blocks": [
+    {
+     "type": "contactForm"
+    },
+    {
+     "type": "textblock",
+     "title": "",
+     "content": "By clicking the \"Get in Touch\" button, you agree to be contacted by Sofia Smart Contracting about your enquiry using the phone, email, or mobile number you provided. We use your details only to respond to you and never share them with third parties for marketing."
+    }
+   ]
+  }
+ },
+ "media": [
+  {
+   "id": "phase1",
+   "type": "imageSequence",
+   "srcs": [
+    [
+     "/images/min/SOFIA PHASE 1/01-min.webp",
+     "Line sketch of the Desert Oasis terraced villas"
+    ],
+    [
+     "/images/min/SOFIA PHASE 1/02-min.webp",
+     "The sketch beginning to take on colour"
+    ],
+    [
+     "/images/min/SOFIA PHASE 1/03-min.webp",
+     "Materials and planting filling in across the scheme"
+    ],
+    [
+     "/images/min/SOFIA PHASE 1/04-min.webp",
+     "The visualisation nearing completion"
+    ],
+    [
+     "/images/min/SOFIA PHASE 1/05-min.webp",
+     "The finished render of the Desert Oasis terraced villas"
+    ]
+   ]
+  },
+  {
+   "id": "phase2_top",
+   "type": "imageSequence",
+   "srcs": [
+    [
+     "/images/min/PHASE 2/01-min.webp",
+     "Two people reviewing plans on a tablet"
+    ],
+    [
+     "/images/min/PHASE 2/02-min.webp",
+     "Three people looking at a large blueprint"
+    ],
+    [
+     "/images/min/PHASE 2/03-min.webp",
+     "A person standing next to a wooden palette"
+    ],
+    [
+     "/images/min/PHASE 2/04-min.webp",
+     "Three people standing over a pile of building parts"
+    ],
+    [
+     "/images/min/PHASE 2/05-min.webp",
+     "A man pointing at the building site"
+    ]
+   ]
+  },
+  {
+   "id": "phase2_bottom",
+   "type": "imageSequence",
+   "srcs": [
+    [
+     "/images/min/PHASE 2/06-min.webp",
+     "A tablet with some drawing of building plans displayed"
+    ],
+    [
+     "/images/min/PHASE 2/07-min.webp",
+     "A finger hovering over the send button on the tablet"
+    ],
+    [
+     "/images/min/PHASE 2/08-min.webp",
+     "A tablet shoing a drawing of a power transmission tower"
+    ],
+    [
+     "/images/min/PHASE 2/09-min.webp",
+     "A tablet showing options for equipment to be ordered"
+    ]
+   ]
+  },
+  {
+   "id": "phase3",
+   "type": "video",
+   "src": [
+    "/videos/min/phase3_loop3.mp4#t=0.1",
+    "A construction timelapse of the building taking shape on site"
+   ]
+  },
+  {
+   "id": "phase4",
+   "type": "imageSequence",
+   "srcs": [
+    [
+     "/images/min/PHASE 4/00-min.webp",
+     "Bringing the finished building's systems online"
+    ]
+   ]
+  },
+  {
+   "id": "phase5",
+   "type": "video",
+   "src": [
+    "/videos/min/phase4_loop.mp4#t=0.1",
+    "The completed building coming to life as systems are switched on"
+   ]
+  },
+  {
+   "id": "phase5_tour",
+   "type": "video",
+   "src": [
+    "/videos/min/phase5_loop.mp4#t=0.01",
+    "A walkthrough zooming in to each key area of the finished building"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+/dist/scripts.min.js
+/dist/style.min.css
+/fonts/Riegla-Bold.ttf
+/fonts/Riegla-Medium.ttf
+/fonts/Riegla-Regular.ttf
+/images/battery_img.jpg
+/images/boards/00_COMMUNITY.png
+/images/boards/01_FIBER_CONNECTION_2.png
+/images/boards/02_GAS_SUPPLY.png
+/images/boards/03_WATER_SUPPLY.png
+/images/boards/04_TURBINE_RESERVATION.png
+/images/boards/05_TSP_ENGAGEMENT.png
+/images/boards/06_PRE_APPLICATION_REVIEW.png
+/images/boards/07_LOAD_RAMP_PLAN.png
+/images/boards/08_CCS_STUDIES.png
+/images/boards/09_LAND_ENVIRONMENTAL_EVALUATION.png
+/images/boards/10_AIR_PERMITTING.png
+/images/boards/11_LOW_CARBON_REQUIREMENT.png
+/images/boards/12_LOAD_INTERCONNECTION_COORDINATION.png
+/images/boards/13_ONSITE_GENERATION_CONSTRUCTION.png
+/images/boards/14_DATA_HALL_CONSTRUCTION.png
+/images/boards/15_SITE_MOBILIZATION.png
+/images/boards/16_SHELL_CONSTRUCTION_FACILITIES.png
+/images/boards/17_EQUIPMENT_DELIVERY.png
+/images/boards/18_GAS_INFRASTRUCTURE.png
+/images/boards/19_LOW_CARBON_PATH.png
+/images/boards/20_RETAIL_POWER_SUPPORT.png
+/images/boards/21_GAS_GRID_RETAIL_2.png
+/images/cooling_img.jpg
+/images/favicon.png
+/images/footprint.png
+/images/min/PHASE 2/01-min.webp
+/images/min/PHASE 2/02-min.webp
+/images/min/PHASE 2/03-min.webp
+/images/min/PHASE 2/04-min.webp
+/images/min/PHASE 2/05-min.webp
+/images/min/PHASE 2/06-min.webp
+/images/min/PHASE 2/07-min.webp
+/images/min/PHASE 2/08-min.webp
+/images/min/PHASE 2/09-min.webp
+/images/min/PHASE 4/00-min.webp
+/images/mobile/PHASE 2/01-min.webp
+/images/mobile/PHASE 2/02-min.webp
+/images/mobile/PHASE 2/03-min.webp
+/images/mobile/PHASE 2/04-min.webp
+/images/mobile/PHASE 2/05-min.webp
+/images/mobile/PHASE 2/06-min.webp
+/images/mobile/PHASE 2/07-min.webp
+/images/mobile/PHASE 2/08-min.webp
+/images/mobile/PHASE 2/09-min.webp
+/images/mobile/PHASE 4/00-min.webp
+/images/og.png
+/images/operations_img.jpg
+/images/power_img.jpg
+/images/scrolly-poster.jpg
+/images/security_img.jpg
+/images/water_img.jpg
+/lottie/mousescroll.json
+/ui/accordion_icon.svg
+/ui/base_icon.svg
+/ui/bolt.svg
+/ui/dive-arrow.svg
+/ui/dive-close.svg
+/ui/onsite_node.svg
+/ui/p2_1.svg
+/ui/p2_2.svg
+/ui/p2_3.svg
+/ui/p2_4.svg
+/ui/p2_5.svg
+/ui/p3_1.svg
+/ui/p3_2.svg
+/ui/p3_3.svg
+/ui/p3_4.svg
+/ui/p3_5.svg
+/ui/phone_icon.svg
+/ui/plus.svg
+/ui/scroll_black.svg
+/ui/step_plus.svg
+/ui/tour-close.svg
+/videos/min/phase1_loop.mp4
+/videos/min/phase1_start.mp4
+/videos/min/phase3_loop3.mp4
+/videos/min/phase4_loop.mp4
+/videos/min/phase5_loop.mp4
+/videos/mobile/phase1_loop.mp4
+/videos/mobile/phase1_start.mp4
+/videos/mobile/phase3_loop3.mp4
+/videos/mobile/phase4_loop.mp4
+/videos/mobile/phase5_loop.mp4

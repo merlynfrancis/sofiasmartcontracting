@@ -1,0 +1,863 @@
+{
+    "labels": {
+        "baseOffering": "Base Offering",
+        "additionalOffering": "Additional Offering",
+        "scrollMessage": "Scroll to explore"
+    },
+
+    "phases": [
+        {
+            "type": "explore",
+            "menuLink": "Site Evaluation",
+            "media": "phase1",
+            "screens": [
+                {
+                    "type": "intro",
+                    "frame": [3.75],
+                    "badge": "Phase 1",
+                    "phaseTitle": ["Site", "Evaluation"],
+                    "pageLoad": "1siteevaluation",
+                    "large": "In Phase 1, NRG and a data center partner review land options, existing grid access infrastructure, and environmental factors to confirm site readiness."
+                },
+                {
+                    "type": "nodes",
+                    "frame": [7.8, 9.05],
+                    "pageLoad": "1siteevaluation:step1",
+                    "screenSummary": "Confirm essential site resources — fiber, water, and natural gas — are available.",
+                    "nodes": [
+                        
+                        {
+                            "pos": [45, 45],
+                            "title": "Fiber Connection",
+                            "linkClick": "SiteEvaluation:FiberConnection",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/01_FIBER_CONNECTION_2.png",
+                            "boardAlt": "",
+                            "content": "Plan to bring premium, high-speed fiber access to data center."
+                            
+                        },
+                        {
+                            "pos": [63, 62],
+                            "title": "Water Supply",
+                            "linkClick": "SiteEvaluation:WaterSupply",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/03_WATER_SUPPLY.png",
+                            "boardAlt": "",
+                            "content": "Ensure reliable water supply for responsible data center cooling, exploring all options for additive water solutions that benefit surrounding areas."
+                        },
+                        {
+                            "pos": [28, 28],
+                            "title": "Natural Gas Supply",
+                            "linkClick": "SiteEvaluation:GasSupply",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/02_GAS_SUPPLY.png",
+                            "boardAlt": "",
+                            "content": "Verify reliable natural gas supply to keep data center powered.",
+                            "onsite": true
+                        }
+                    ]
+                },
+                {
+                    "type": "nodes",
+                    "frame": [11.8, 13.5],
+                    "pageLoad": "1siteevaluation:step2",
+                    "screenSummary": "Start early coordination, applications, and agreements related to power needs.",
+                    "nodes": [
+                        {
+                            "pos": [62, 38],
+                            "title": "Load Ramp Plan",
+                            "linkClick": "SiteEvaluation:LoadRampPlan",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/07_LOAD_RAMP_PLAN.png",
+                            "boardAlt": "",
+                            "content": "Outline equipment and server installation stages related to power ramping to inform the Transmission Service Provider (TSP)."
+                        },
+                        {
+                            "pos": [5, 63],
+                            "title": "TSP & ISO Engagement",
+                            "linkClick": "SiteEvaluation:TSPEngagement",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/05_TSP_ENGAGEMENT.png",
+                            "boardAlt": "",
+                            "content": "NRG engages with local Transmission Service Provider (TSP) on grid connection requirements for data centers and new BYOP. Independent System Operator (ISO) requirements for collocated load & generation are also evaluated."
+                        },
+                        {
+                            "pos": [45, 20],
+                            "title": "Application Materials Review",
+                            "linkClick": "SiteEvaluation:PreApplicationReview",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/06_PRE_APPLICATION_REVIEW.png",
+                            "boardAlt": "",
+                            "content": "NRG reviews load materials and formulates generation materials before submission to the Transmission Service Provider (TSP) and/or Independent System Operator (ISO)."
+                        },
+                        {
+                            "pos": [50, 60],
+                            "title": "Turbine Reservation",
+                            "linkClick": "SiteEvaluation:TurbineReservation",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/04_TURBINE_RESERVATION.png",
+                            "boardAlt": "",
+                            "content": "NRG leverages 5.4 GW of H-Class CCGT turbine slot reservations with in-service dates between 2029 and 2032 with leading equipment manufacturer GE Vernova.",
+                            "onsite": true
+                        }
+                    ]
+                },
+                {
+                    "type": "nodes",
+                    "frame": [17.3, 18.8],
+                    "pageLoad": "1siteevaluation:step3",
+                    "screenSummary": "Review land use, environmental, and community factors for site readiness.",
+                    "nodes": [
+                        {
+                            "pos": [37, 65],
+                            "title": "<span>Land + Environmental</span><span>Evaluation</span>",
+                            "linkClick": "SiteEvaluation:",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/09_LAND_ENVIRONMENTAL_EVALUATION.png",
+                            "boardAlt": "",
+                            "content": "Require formal evaluations of land and environment — study assessments, surveys, reports — to confirm site readiness."
+                        },
+                        {
+                            "pos": [24, 39],
+                            "title": "Lower-Carbon Options",
+                            "linkClick": "SiteEvaluation:LowCarbonRequirement",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/11_LOW_CARBON_REQUIREMENT.png",
+                            "boardAlt": "",
+                            "content": "Discuss lower-carbon power goals with customer — hourly match, 24/7, onsite or market-based RECs — and set timeline to reach goals.",
+                            "deepDive": "LowerCarbonPathways",
+                            "deepDiveLabel": "Learn How"
+                        },
+                        {
+                            "pos": [50, 50],
+                            "title": "Community Alignment",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/00_COMMUNITY.png",
+                            "boardAlt": "",
+                            "content": "Engage local stakeholders, officials, and residents to inform development plans, address concerns, and support the approval process."
+                        },
+                        {
+                            "pos": [35, 20],
+                            "title": "Air Permitting",
+                            "linkClick": "SiteEvaluation:AirPermittin",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/10_AIR_PERMITTING.png",
+                            "boardAlt": "",
+                            "content": "NRG obtains necessary permits to ensure operations meet clean air standards.",
+                            "onsite": true
+                        },
+                        {
+                            "pos": [65, 35],
+                            "title": "CCS Studies",
+                            "linkClick": "SiteEvaluation:CCS Studies",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/08_CCS_STUDIES.png",
+                            "boardAlt": "",
+                            "content": "If desired by customer, NRG conducts preliminary Carbon Capture & Sequestration (CCS) feasibility studies.",
+                            "onsite": true
+                        }
+                    ]
+                },
+                {
+                    "type": "exit",
+                    "frame": [20.2],
+                    "button": "Scroll to Phase 2"
+                }
+            ]
+        },
+        
+        {
+            "type": "scroll",
+            "menuLink": "Site Development",
+            "button": "Scroll to Phase 3",
+            "pageLoad": "2sitedevelopment",
+            "screens": [
+                {
+                    "type": "introScreen",
+                    "badge": "Phase 2",
+                    "phaseTitle": ["Site", "Development"],
+                    "large": "In Phase 2, approvals and agreements are secured to establish grid connection to site."
+                },
+                {
+                    "type": "nodeDotPoints",
+                    "media": "phase2_top",
+                    "badge": "Grid-Connected Solutions",
+                    "isFlipped": false,
+                    "blocks": [
+                        {   
+                            "frame": [1],
+                            "heading": "Site + Grid Reviews",
+                            "pageLoad": "2sitedevelopment:gridconnectedsolution",
+                            "content": "Review site power needs, grid capacity, and potential future upgrades."
+                        },
+                        {   
+                            "frame": [2],
+                            "heading": "Load Request to TSP",
+                            "pageLoad": "2sitedevelopment:gridconnectedsolution",
+                            "content": "Submit official request with Transmission Service Provider (TSP) to connect data center to grid, including electrical drawings, MW quantities, site plans, load ramps, and proof of land access."
+                        },
+                        {   
+                            "frame": [3],
+                            "heading": "TSP Agreement + Deposit",
+                            "pageLoad": "2sitedevelopment:gridconnectedsolution",
+                            "content": "TSP completes load study to identify if upgrades are needed and issues interconnection agreement. Agreement is signed and deposit provided, with NRG supporting review and coordination."
+                        },
+                        {   
+                            "frame": [4],
+                            "heading": "Long-Lead Orders",
+                            "pageLoad": "2sitedevelopment:gridconnectedsolution",
+                            "content": "NRG may pre-order long-lead equipment through TSP to prevent project delays."
+                        },
+                        {   
+                            "frame": [5],
+                            "heading": "Permitting + Entitlements",
+                            "pageLoad": "2sitedevelopment:gridconnectedsolution",
+                            "content": "Developer secures permits to build and operate data center and confirms land ownership and access rights."
+                        }
+                    ]
+                },
+                {
+                    "type": "breakHeading",
+                    "icon": "https://nrgcdn.b-cdn.net/ui/bolt.svg",
+                    "iconAlt": "Lightning Bolt Icon",
+                    "heading": "Onsite generation needs:"
+                },
+                {
+                    "type": "nodeDotPoints",
+                    "media": "phase2_bottom",
+                    "badge": "Onsite Generation",
+                    "isFlipped": true,
+                    "blocks": [
+                        {   
+                            "frame": [1],
+                            "heading": "BYOP Plan",
+                            "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+                            "content": "NRG works with data center to customize BYOP plan."
+                        },
+                        {   
+                            "frame": [2],
+                            "heading": "BYOP Interconnection Applications",
+                            "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+                            "content": "NRG submits BYOP characteristics and technical details to Independent System Operator (ISO)."
+                        },
+                        {   
+                            "frame": [3],
+                            "heading": "Full Interconnection Study",
+                            "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+                            "content": "NRG works with ISO to complete full interconnection study, ensure safety standards are met, and sign agreement with deposit to fund infrastructure needed to connect plant."
+                        },
+                        {   
+                            "frame": [4],
+                            "heading": "BYOP Equipment Orders",
+                            "pageLoad": "2sitedevelopment:onsitegenerationneeds",
+                            "content": "NRG finalizes long-lead equipment for BYOP plant and associated electrical infrastructure."
+                        }
+                    ]
+                },
+                {
+                    "type": "deepDiveFeature",
+                    "heading": "Bridge Power Solution",
+                    "content": "NRG brings speed to power for data centers using a phased deployment strategy that leverages third-party bridge power solutions when grid power or necessary equipment is unavailable.",
+                    "pageLoad": "2Sitedevelopment:bridgepowersolution",
+                    "buttonLabel": "Explore Bridge Power Solutions",
+                    "deepDive": "BridgePower"
+                }
+            ]
+                
+        },
+
+        {
+            "type": "explore",
+            "menuLink": "Construction",
+            "media": "phase3",
+            "screens": [
+                {
+                    "type": "intro",
+                    "frame": [2],
+                    "badge": "Phase 3",
+                    "phaseTitle": ["Construction"],
+                    "pageLoad": "3construction",
+                    "large": "In Phase 3, data center buildings and BYOP are constructed and connected to supporting infrastructure."
+                },
+                {
+                    "type": "nodes",
+                    "frame": [4.2, 6.0],
+                    "pageLoad": "3construction:step1",
+                    "screenSummary": "Coordinate interconnection, track timelines, and manage delivery of major equipment and BYOP.",
+                    "nodes": [
+                        {
+                            "pos": [40, 45],
+                            "title": "<span>Load Interconnection</span><span>Coordination</span>",
+                            "linkClick": "Construction:",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/12_LOAD_INTERCONNECTION_COORDINATION.png",
+                            "boardAlt": "",
+                            "content": "NRG coordinates load interconnection and tracks timelines for infrastructure as Transmission Service Provider (TSP) builds upgrades, if needed, like substations, transmission lines, distribution lines, and protection schemes."
+                        },
+                        {
+                            "pos": [63, 30],
+                            "title": "BYOP Construction",
+                            "linkClick": "Construction:",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/13_ONSITE_GENERATION_CONSTRUCTION.png",
+                            "boardAlt": "",
+                            "content": "NRG manages BYOP construction with an Engineering, Procurement, and Construction (EPC) company, like Kiewit, and oversees interconnection to grid. Through the NRG x Kiewit partnership, established labor agreements provide price and schedule certainty.",
+                            "onsite": true
+                        }
+                    ]
+                },
+                {
+                    "type": "nodes",
+                    "frame": [9.2, 10.2],
+                    "pageLoad": "3construction:step2",
+                    "screenSummary": "Build data center shells, data halls, and supporting infrastructure on site.",
+                    "nodes": [
+                        {
+                            "pos": [25, 25],
+                            "title": "Site Mobilization",
+                            "linkClick": "Construction:SiteMobilization",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/15_SITE_MOBILIZATION.png",
+                            "boardAlt": "",
+                            "content": "NRG mobilizes construction crews, equipment, and materials onto site to begin construction.",
+                            "onsite": true
+                        },
+                        {
+                            "pos": [55, 26],
+                            "title": "Data Hall Construction",
+                            "linkClick": "Construction:DataHallConstruction",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/14_DATA_HALL_CONSTRUCTION.png",
+                            "boardAlt": "",
+                            "content": "Third party constructs and outfits data halls where servers will run."
+                        },
+                        {
+                            "pos": [72, 45],
+                            "title": "Natural Gas Infrastructure",
+                            "linkClick": "Construction:GasInfrastructure",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/18_GAS_INFRASTRUCTURE.png",
+                            "boardAlt": "",
+                            "content": "NRG constructs natural gas infrastructure needed to supply Combined-Cycle Gas Turbine (CCGT) plant, bridge power units, or backup systems.",
+                            "deepDive": "GasCapabilities",
+                            "deepDiveLabel": "Explore Capabilities",
+                            "onsite": true
+                        },
+                        {
+                            "pos": [20, 53],
+                            "title": "Equipment Delivery",
+                            "linkClick": "Construction:EquipmentDelivery",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/17_EQUIPMENT_DELIVERY.png",
+                            "boardAlt": "",
+                            "content": "NRG manages delivery of major power equipment, turbines, and transformers to site for installation.",
+                            "onsite": true
+                        },
+                        {
+                            "pos": [50, 57],
+                            "title": "Shell Construction + Facilities",
+                            "linkClick": "Construction:ShellConstructionFacilities",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/16_SHELL_CONSTRUCTION_FACILITIES.png",
+                            "boardAlt": "",
+                            "content": "Main data center shells are constructed by third parties along with supporting facilities such as backup generation, fiber and connectivity, water processing, administrative buildings, and detention ponds."
+                        }
+                    ]
+                },
+                {
+                    "type": "exit",
+                    "frame": [13.0, 15],
+                    "button": "Scroll to Phase 4"
+                }
+            ]
+        },
+
+        {
+            "type": "horizontal",
+            "menuLink": "Power Ramp-up",
+            "button": "Scroll to Power Up",
+            "pageLoad": "4powerrampup",
+            "screens": [
+                {
+                    "type": "introScreen",
+                    "badge": "Phase 4",
+                    "phaseTitle": ["Power", "Ramp-up"],
+                    "large": "In Phase 4, grid interconnection and BYOP support load ramping as servers are installed and tested."
+                },
+                {
+                    "type": "imageBreak",
+                    "media": "phase4"
+                },
+                {
+                    "type": "nodeDotRail",
+                    "toggle1": "Grid-Connected Solutions",
+                    "toggle2": "Onsite Generation",
+                    "blocks": [
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "01",
+                            "heading": "Grid Interconnection Live",
+                            "content": "NRG, data center, and Transmission Service Provider (TSP) coordinate grid interconnection, enabling data center to draw power directly from grid."
+                        },
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "",
+                            "heading": "Bridge Power Online (Optional)",
+                            "content": "If required, NRG brings bridge power online before BYOP or full grid interconnection to maintain operations until permanent power is available."
+                        },
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "02",
+                            "heading": "Phased Power Delivery and Ramp",
+                            "content": "Developer installs servers, runs tests, and gradually increases power use as equipment comes online."
+                        },
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "03",
+                            "heading": "BYOP Online",
+                            "content": "NRG completes and commissions BYOP and coordinates metering to deliver energy to both the grid and data center."
+                        },
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "04",
+                            "heading": "Full-Capacity Ramp",
+                            "content": "Developer continues adding servers and scaling up until data center reaches full capacity, enabled by BYOP."
+                        },
+                        {   
+                            "onsite": true,
+                            "pageLoad": "4powerrampup:onsitegeneration",
+                            "number": "05",
+                            "heading": "CCGT Supplement",
+                            "content": "NRG supplements and complements grid power with Combined-Cycle Gas Turbine (CCGT) generation."
+                        }
+                    ]
+                }
+            ]
+                
+        },
+
+        {
+            "type": "explore",
+            "menuLink": "Fully Operational",
+            "media": "phase5",
+            "screens": [
+                {
+                    "type": "intro",
+                    "frame": [2.65],
+                    "badge": "Phase 5",
+                    "phaseTitle": ["Fully", "Operational"],
+                    "pageLoad": "5fullyoperational",
+                    "large": "In Phase 5, data center operates at full capacity with continuous power and energy support."
+                },
+                {
+                    "type": "nodes",
+                    "frame": [2.65, 3.65],
+                    "pageLoad": "5fullyoperational:step1",
+                    "screenSummary": "Deliver reliable power, optimize operations, and advance low-carbon performance.",
+                    "nodes": [
+                        {
+                            "pos": [72, 33],
+                            "title": "Retail Power + Support",
+                            "linkClick": "FullyOperational:RetailPowerSupport",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/20_RETAIL_POWER_SUPPORT.png",
+                            "boardAlt": "",
+                            "content": "NRG provides retail power solutions tailored to customers, including hedging for risk mitigation, demand response, strategic services, and emissions tracking.",
+                            "deepDive": "RetailOfferings",
+                            "deepDiveLabel": "Explore Offerings"
+                        },
+                        {
+                            "pos": [45, 55],
+                            "title": "Lower-Carbon Options",
+                            "linkClick": "FullyOperational:Low-CarbonPath",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/19_LOW_CARBON_PATH.png",
+                            "boardAlt": "",
+                            "content": "NRG advances progress on data center low-carbon goals.",
+                            "deepDive": "LowerCarbonPathways",
+                            "deepDiveLabel": "Learn How"
+                        },
+                        {
+                            "pos": [42, 30],
+                            "title": "BYOP Operations",
+                            "linkClick": "FullyOperational:GasGridRetail",
+                            "board": "https://nrgcdn.b-cdn.net/images/boards/21_GAS_GRID_RETAIL_2.png",
+                            "boardAlt": "",
+                            "content": "NRG delivers robust asset monetization solutions that optimize natural gas BYOP alongside grid power for reliable and flexible supply.",
+                            "onsite": true
+                        }
+                    ]
+                }
+            ]
+        },
+            
+        {
+            "type": "scroll",
+            "isStatic": true,
+            "menuLink": "Virtual Tour",
+            "button": "Scroll to take a tour",
+            "pageLoad": "6virtualtour",
+            "screens": [
+                {   
+                    "type": "introScreen",
+                    "frame": [0],
+                    "media": "phase5_tour",
+                    "badge": "Take a tour",
+                    "phaseTitle": ["Explore Your", "Data Center"],
+                    "large": "The data center is fully operational. Step inside to see how everything comes together — from servers and cooling to power, people, and sustainability."
+                }
+            ]
+        },
+        
+        {
+            "type": "explore",
+            "media": "phase5_tour",
+            "screens": [
+                { 
+                    "type": "nodes",  
+                    "media": "phase5_tour",
+                    "frame": [0],
+                    "screenSummary": "",
+                    "isTour": true,
+                    "pageLoad": "6virtualtour:takeatour",
+                    "nodes": [
+                        {
+                            "pos": [46, 45],
+                            "title": "Security + Data",
+                            "tourLocation": "Security"
+                        },
+                        {
+                            "pos": [39, 33],
+                            "title": "Cooling + Climate",
+                            "tourLocation": "Cooling"
+                        },
+                        {
+                            "pos": [80, 36],
+                            "title": "Power + Connectivity",
+                            "tourLocation": "Power"
+                        },
+                        {
+                            "pos": [59, 59],
+                            "title": "Battery + Balance",
+                            "tourLocation": "Battery"
+                        },
+                        {
+                            "pos": [69, 25],
+                            "title": "Operations + People",
+                            "tourLocation": "Operations"
+                        },
+                        {
+                            "pos": [38, 64],
+                            "title": "Sustainability + Water",
+                            "tourLocation": "Sustainability"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "tour": {
+        "Security": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/security_img.jpg",
+            "media": "phase5_tour",
+            "frames": [0, 3.2, 5.0, 8.2],
+            "pageLoad": "6virtualtour:security",
+            "blocks": [
+                {   
+                    "heading": "Security",
+                    "id": "securi",
+                    "content": "Layered security measures — badges, biometrics, cameras — protect both physical and digital assets inside the facility."
+                },
+                {   
+                    "heading": "Data Hall Operations",
+                    "id": "datahs",
+                    "content": "Inside the data halls, thousands of servers run workloads nonstop, supported by data center staff monitoring performance 24/7."
+                }
+            ]
+        },
+        "Cooling": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/cooling_img.jpg",
+            "media": "phase5_tour",
+            "frames": [8.6, 9.7, 11.6, 12.7],
+            "pageLoad": "6virtualtour:cooling",
+            "blocks": [
+                {   
+                    "heading": "HVAC + Airflow",
+                    "id": "hvaca",
+                    "content": "HVAC systems circulate and filter air, maintaining stable climate conditions across the facility."
+                },
+                {   
+                    "heading": "Cooling Systems",
+                    "id": "cools",
+                    "content": "Water-cooled systems and advanced HVAC regulate temperature to keep servers running efficiently."
+                }
+            ]
+        },
+        "Power": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/power_img.jpg",
+            "media": "phase5_tour",
+            "frames": [13.1, 14.2, 16.1, 17.2],
+            "pageLoad": "6virtualtour:power",
+            "blocks": [
+                {   
+                    "heading": "Grid Interconnection",
+                    "id": "gridi",
+                    "content": "This is where utility power flows into the site. NRG manages timing, load coordination, phased energization, and export of power to the grid in times of need."
+                },
+                {   
+                    "heading": "Fiber Connectivity",
+                    "id": "fiberc",
+                    "content": "High-speed fiber connections link the data center to the world, enabling low-latency communication across global networks."
+                }
+            ]
+        },
+        "Battery": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/battery_img.jpg",
+            "media": "phase5_tour",
+            "frames": [18.0, 19.0, 19.9, 21.0],
+            "pageLoad": "6virtualtour:battery",
+            "blocks": [
+                {   
+                    "heading": "Battery Systems",
+                    "id": "batts",
+                    "content": "Battery Energy Storage Systems (BESS) and backup generators stand ready to provide instant power during outages."
+                },
+                {   
+                    "heading": "Power Management",
+                    "id": "powerm",
+                    "content": "Intelligent systems decide when to charge, discharge, or balance grid input — improving site-wide efficiency."
+                }
+            ]
+        },
+
+        "Operations": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/operations_img.jpg",
+            "media": "phase5_tour",
+            "frames": [21.8, 23.55, 24.85, 26.6],
+            "pageLoad": "6virtualtour:operations",
+            "blocks": [
+                {   
+                    "heading": "Onsite Staff",
+                    "id": "onsites",
+                    "content": "Teams work around the clock in hall offices and support areas to ensure uptime, security, and customer service."
+                },
+                {   
+                    "heading": "Control Room",
+                    "id": "controlr",
+                    "content": "The “nerve center,” where operators track energy use, cooling, and reliability in real time."
+                }
+            ]
+        },
+
+        "Sustainability": {
+            "thumb": "https://nrgcdn.b-cdn.net/images/water_img.jpg",
+            "media": "phase5_tour",
+            "frames": [27.1, 28.1, 29.00, 30.1],
+            "pageLoad": "6virtualtour:water",
+            "blocks": [
+                {   
+                    "heading": "Sustainability",
+                    "id": "sust",
+                    "content": "Onsite renewables, lower-carbon pathways, and emissions tracking tools reduce the environmental footprint of operations."
+                },
+                {   
+                    "heading": "Water Processing",
+                    "id": "waterp",
+                    "content": "Water is treated, cooled, and reused to reduce waste while providing consistent cooling for equipment."
+                }
+            ]
+        }
+
+    },
+
+    "deepDives": {
+        "LowerCarbonPathways": {
+            "title": "NRG Lower-Carbon Options",
+            "intro": "",
+            "color": "#E0AEFF",
+            "pageLoad": "deepdive:lowercarbonpathways",
+            "blocks": [
+                {   
+                    "type": "accordion",
+                    "id": "lc1",
+                    "heading": "Sleeved Renewable Power Purchase Agreements (PPAs)",
+                    "content": "Seamlessly integrate off-site renewables into the data center power agreement, with all settlement and management processes handled on behalf of customers."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc2",
+                    "heading": "Renewable Energy Credits (RECs)",
+                    "content": "Cover unmatched usage with unbundled Green-e certified RECs, including options for asset- or state-specific certificates."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc3",
+                    "heading": "24x7 Carbon-Free",
+                    "content": "Measure and demonstrate carbon-free usage on an hourly basis through renewable PPAs with grid consumption data."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc4",
+                    "heading": "Certified or Renewable Natural Gas",
+                    "content": "Fuel BYOP with certified or renewable natural gas to decrease Scope 2 emissions."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc5",
+                    "heading": "Onsite Solar or Battery Energy Storage System (BESS)",
+                    "content": "Deploy solar and/or battery storage by leveraging available land and interconnection for renewable energy with clear deliverability and additionality."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc6",
+                    "heading": "Hydrogen-capable Solutions",
+                    "content": "Blend blue or green hydrogen into combined-cycle gas turbine fuel streams to provide lower-carbon, dispatchable power."
+                },
+                {   
+                    "type": "accordion",
+                    "id": "lc7",
+                    "heading": "Carbon Capture & Sequestration (CCS)",
+                    "content": "Apply carbon capture and sequestration technologies to abate residual emissions from natural gas combustion."
+                }
+            ]
+        },
+
+        "BridgePower": {
+            "title": "Bridge Power Solutions",
+            "intro": "Leverage bridge power solutions to accelerate energization before CCGT or grid power is available",
+            "color": "#6FE45D",
+            "pageLoad": "deepdive:bridgepowersolutions",
+            "blocks": [
+                {   
+                    "type": "table",
+                    "title": "Partnership with 3rd Party Bridge Power Solution",
+                    "rows": [
+                        ["Reliability / Redundancy", "99.9%, (three 9s), (N+2) "],
+                        ["Arrangement", "Gas engine-based, islanded power microgrid "],
+                        ["Fast Response", "Designed based on simulated data center load, oscillation, and managed load fluctuations "],
+                        ["Contract Structure", "Take or pay facilities fee /kW-month + fuel supply cost"]
+                    ]
+                }
+            ]
+        },
+
+        "GasCapabilities": {
+            "title": "NRG Natural Gas Capabilities",
+            "intro": "As the #1 natural gas retailer to business customers in deregulated markets, NRG serves customers across the entire value chain — from producers to utilities to consumers.",
+            "color": "#7FEFF6",
+            "pageLoad": "deepdive:gascapabilities",
+            "blocks": [
+                {   
+                    "type": "table",
+                    "title": "",
+                    "rows": [
+                        ["Commercial & Industrial (C&I) Provider:", "Natural gas supply partner with flexible terms and tailored energy management for data centers." ],
+                        ["Wholesale Provider:", "Large-volume supply at market prices enables data centers to access scale benefits."],
+                        ["Redundancy:", "NRG will provide numerous full-capacity natural gas connections."],
+                        ["Direct:", "Provide direct connections and serve behind the burner tip."],
+                        ["Price Optimization:", "NRG offers optionality for lower costs through optimization executed via robust commercial operations team."]
+                    ]
+                },
+                {   
+                    "type": "textblock",
+                    "title": "Footprint across North America",
+                    "content": "<img src='https://nrgcdn.b-cdn.net/images/footprint.png' id='footprint-img'/>"
+                }
+            ]
+        },
+
+        "RetailOfferings": {
+            "title": "NRG Retail Offerings",
+            "intro": "Retail supply agreement leveraging BYOP Combined-Cycle Gas Turbine (CCGT) asset and grid interconnection",
+            "color": "#E0AEFF",
+            "pageLoad": "deepdive:retailofferings",
+            "blocks": [
+                {
+                    "type": "table",
+                    "title": "One of the leading retail power providers in competitive markets:",
+                    "rows": [
+                        ["Flexible Tenor:", "Long term up to 20 years, short term, option periods" ],
+                        ["Flexible Product Structure:", "Flexible solutions, from index to fixed, to meet data center energy needs and risk profile"],
+                        ["Credit + Collateral:", "Works with data center to minimize customer exposure and risk in line with their needs"],
+                        ["Power Cost Optimization:", "Large and experienced trading desk situated to optimize pricing and CCGT dispatch, market experts"]
+                    ]
+                }
+            ]
+        },
+        
+        "Onsite": {
+            "title": "What is On Site Power",
+            "intro": "",
+            "color": "#FFC20E",
+            "blocks": [
+                {   
+                    "type": "textblock",
+                    "title": "",
+                    "content": "Onsite generation is the production of energy at the point of use – the site where it is to be consumed. <br><br> It is a form of decentralised energy, enabling a business to make and use its own energy at a particular location, rather than buying that energy through the grid."
+                }
+            ]
+        },
+
+        "Contact": {
+            "title": "Ready to talk to an energy expert?",
+            "intro": "Whatever you need, we'll help you get it done.",
+            "color": "#6FE45D",
+            "pageLoad": "7getIntouch",
+            "blocks": [
+                {
+                    "type": "contactForm"
+                },
+                {
+                    "type": "textblock",
+                    "title": "",
+                    "content": "By clicking the 'Talk to an Expert' button, you agree to the <a href=\"https://www.nrg.com/legal/privacy-policy.html\" target=\"_blank\">Privacy Policy</a> and authorize NRG to contact you for marketing purposes at the telephone, email, or mobile number you entered using automated telephone technology, including auto-dialers and text messages, even if your telephone or mobile number is currently listed on any state, federal, or corporate \"Do Not Call\" list, and you are not required to give your consent as a condition of purchase."
+                }
+            ]
+        }
+    },
+
+    "media": [
+
+        {
+            "id": "phase1",
+            "type": "video", 
+            "src": ["/videos/min/phase1_loop.mp4#t=0.1", "A video showing the three phases of preparation for the data center site in Phase 1"]
+        },
+        
+        {
+            "id": "phase2_top",
+            "type": "imageSequence", 
+            "srcs": [
+                ["/images/min/PHASE 2/01-min.webp", "Two people reviewing plans on a tablet"],
+                ["/images/min/PHASE 2/02-min.webp", "Three people looking at a large blueprint"],
+                ["/images/min/PHASE 2/03-min.webp", "A person standing next to a wooden palette"],
+                ["/images/min/PHASE 2/04-min.webp", "Three people standing over a pile of building parts"],
+                ["/images/min/PHASE 2/05-min.webp", "A man pointing at the building site"]
+            ]
+        },
+        {
+            "id": "phase2_bottom",
+            "type": "imageSequence", 
+            "srcs": [
+                ["/images/min/PHASE 2/06-min.webp", "A tablet with some drawing of building plans displayed"],
+                ["/images/min/PHASE 2/07-min.webp", "A finger hovering over the send button on the tablet"],
+                ["/images/min/PHASE 2/08-min.webp", "A tablet shoing a drawing of a power transmission tower"],
+                ["/images/min/PHASE 2/09-min.webp", "A tablet showing options for equipment to be ordered"]
+            ]
+        },
+        {
+            "id": "phase3",
+            "type": "video", 
+            "src": ["/videos/min/phase3_loop3.mp4#t=0.1", "A video showing the construction of the data center in a timelapse"]
+
+        },
+        {
+            "id": "phase4",
+            "type": "imageSequence", 
+            "srcs": [
+                ["/images/min/PHASE 4/00-min.webp", "A man stands in the control room about to pull a lever to power up the data center"]
+            ]
+        },
+
+        {
+            "id": "phase5",
+            "type": "video", 
+            "src": ["/videos/min/phase4_loop.mp4#t=0.1", "A video showing the powering up of the completed data center"]
+
+        },
+
+        {
+            "id": "phase5_tour",
+            "type": "video", 
+            "src": ["/videos/min/phase5_loop.mp4#t=0.01", "A video that zooms in to each of the key locations in the data center"]
+        }
+        
+      
+    ]
+
+}
