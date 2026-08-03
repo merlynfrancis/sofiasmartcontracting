@@ -1,5 +1,12 @@
 # dependencies (regenerated with: cd _tools && npm install)
 _tools/node_modules/
+site/node_modules/
+
+# secrets — never commit real credentials (production values live in Vercel)
+.env
+.env.local
+site/.env
+site/.env.local
 
 # macOS
 .DS_Store

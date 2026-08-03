@@ -6,17 +6,16 @@
  * than patch the bundle, this intercepts the form's submit in the CAPTURE phase
  * (which runs before the bundle's own bubble-phase handler) and takes over:
  *   - stopImmediatePropagation() prevents the NRG handler from ever running,
- *   - the submission is sent to FormSubmit.co, which emails it to Sofia with no
- *     backend of our own.
+ *   - the submission is sent to our own /api/contact serverless route, which
+ *     emails a branded message to info@sofiacontracting.com.
  *
- * FormSubmit needs a one-time activation: the first submission triggers a
- * confirmation email to info@sofiacontracting.com; click its link once and every
- * submission after that arrives in the inbox.
+ * The API route only exists on the deployed site (Vercel). On the local dev
+ * server it will 404, so test the form on the live URL.
  */
 (function () {
   'use strict';
 
-  var ENDPOINT = 'https://formsubmit.co/ajax/info@sofiacontracting.com';
+  var ENDPOINT = '/api/contact';
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   // --- hide the US-only Zip Code field wherever a contact form appears ---
@@ -92,22 +91,19 @@
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         name: name,
-        company: company || '(not provided)',
+        company: company,
         phone: phone,
-        email: email,
-        _subject: 'New website enquiry from Sofia Smart Contracting',
-        _template: 'table',
-        _captcha: 'false'
+        email: email
       })
     }).then(function (r) {
       return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, body: j }; });
     }).then(function (res) {
       if (container) container.classList.remove('contactForm--loading');
-      if (res.ok) {
+      if (res.ok && res.body && res.body.ok) {
         if (container) container.classList.add('contactForm--success'); // reveals the stock thank-you
       } else {
         if (btn) btn.disabled = false;
-        line.textContent = (res.body && res.body.message) || 'Something went wrong. Please email info@sofiacontracting.com.';
+        line.textContent = (res.body && res.body.error) || 'Something went wrong. Please email info@sofiacontracting.com.';
         line.style.display = 'block';
       }
     }).catch(function () {

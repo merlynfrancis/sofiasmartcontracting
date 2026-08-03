@@ -1,0 +1,9 @@
+{
+  "name": "sofia-smart-contracting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sofia Smart Contracting website and contact API",
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  }
+}
