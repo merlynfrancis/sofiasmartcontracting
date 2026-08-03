@@ -331,3 +331,60 @@ html.menu-dark .nav__logoImg--onDark  { opacity: 1; }
 
 /* Focus rings elsewhere in the UI reused the same yellow. */
 .nav__logo:focus-visible { outline: 4px solid var(--brand-accent); }
+
+/* ---------- WhatsApp floating button ---------- */
+
+/* Fixed bottom-left contact shortcut. Uses px (not rem) so it stays a reliable
+   ~58px tap target regardless of the rem scaling the rest of the site uses.
+   z-index 15 sits above page content and the nav (10) but below the splash (20)
+   and any open menu/deep-dive overlay, so it hides behind those rather than
+   floating over them. */
+.waFloat {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 15;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #25d366;               /* WhatsApp green — the recognised CTA colour */
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, .28);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .28);
+  -webkit-transition: -webkit-transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.waFloat:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .34);
+}
+.waFloat:focus-visible { outline: 4px solid var(--brand-accent); outline-offset: 2px; }
+.waFloat svg { width: 25px; height: 25px; display: block; }
+
+/* Kept off the splash; the app drops `loading-page` from <html> after Enter Site. */
+html.loading-page .waFloat { opacity: 0; pointer-events: none; }
+
+/* ---------- contact form: drop the US-only Zip, style the validation line ---------- */
+
+/* Zip Code is meaningless in the UAE and the stock build makes it a required
+   5-digit field; sofia-contact.js also hides it in JS, this is the belt-and-braces
+   CSS for browsers evaluating :has(). */
+.contactForm__form .form-group:has(input[name="zipCode"]) { display: none; }
+
+.sofiaFormError {
+  display: none;
+  color: #b23b2e;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  margin: 0 0 1.5rem;
+}
