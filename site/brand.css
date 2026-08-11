@@ -388,3 +388,56 @@ html.loading-page .waFloat { opacity: 0; pointer-events: none; }
   line-height: 1.35;
   margin: 0 0 1.5rem;
 }
+
+/* ---------- back-to-previous-phase button ---------- */
+
+/* A reliable alternative to the back-swipe: tap to step back one phase (wired to
+   twoWayScroll.back() in two-way-scroll.js). Bottom-right, opposite the WhatsApp
+   button. Brand brown with a beige arrow.
+   Hidden by default; revealed only while inside a phase — two-way-scroll.js sets
+   html[data-phase] to 0 on the start screen and 1..7 within the phases, so the
+   button never shows on the splash or start screen (nothing to go back to). */
+.backPhase {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 15;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--brand-bg, #3e3228);
+  color: var(--brand-accent, #f2e0c4);
+  cursor: pointer;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-shadow: 0 6px 20px rgba(0, 0, 0, .28);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .28);
+  -webkit-transition: -webkit-transform .2s ease, box-shadow .2s ease;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.backPhase:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, .34);
+}
+.backPhase:focus-visible { outline: 4px solid var(--brand-accent); outline-offset: 2px; }
+.backPhase svg { width: 22px; height: 22px; display: block; }
+
+html[data-phase="1"] .backPhase,
+html[data-phase="2"] .backPhase,
+html[data-phase="3"] .backPhase,
+html[data-phase="4"] .backPhase,
+html[data-phase="5"] .backPhase,
+html[data-phase="6"] .backPhase,
+html[data-phase="7"] .backPhase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

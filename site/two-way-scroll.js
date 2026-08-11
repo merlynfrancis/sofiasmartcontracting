@@ -412,4 +412,17 @@
       };
     },
   };
+
+  // Visible back control — the reliable alternative to the back-swipe. Steps back
+  // one phase. Gated the same as the swipe (not mid-transition, respects the
+  // cooldown) so a double-tap can't fire two moves into one animation.
+  (function wireBackButton() {
+    var btn = document.getElementById('back-phase');
+    if (!btn) return;
+    btn.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      if (blocked() || Date.now() < lockedUntil) return;
+      goBack();
+    });
+  })();
 })();
