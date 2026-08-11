@@ -16,3 +16,6 @@ site/.env.local
 *.bak2
 *.orig
 *.bak-yellow
+
+# local snapshot of the villa-render version of phase 1
+site/content.json.villa
