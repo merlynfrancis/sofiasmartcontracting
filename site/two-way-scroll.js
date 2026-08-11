@@ -372,7 +372,12 @@
     if (touchY === null || !ev.touches || !ev.touches[0]) return;
     var y = ev.touches[0].clientY, d = y - touchY;
     touchY = y;
-    if (d > 0) onUp(d * 2.5);                   // drag down == scroll up
+    // Drag down == go back. Weighted heavily (~5x) so one natural downward
+    // flick (~180px) crosses UP_THRESHOLD — otherwise forward advances on a
+    // small swipe while going back needs a huge deliberate drag, which reads as
+    // "back doesn't work". A forward drag still zeroes the accumulator, so this
+    // can't be triggered by scrolling forward.
+    if (d > 0) onUp(d * 5);
     else if (d < 0) accum = 0;
   }, { passive: true });
 
