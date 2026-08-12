@@ -441,3 +441,20 @@ html[data-phase="7"] .backPhase {
   display: -ms-flexbox;
   display: flex;
 }
+
+/* ---------- mobile tour menu: keep all 6 items on-screen ---------- */
+
+/* The tour's bottom-sheet menu (.exploreScreen__tourNav) is a fixed 40rem tall
+   panel pinned with top:calc(100vh - 40rem), so its bottom edge lands at 100vh.
+   On phones 100vh includes the strip BEHIND the browser's address/tool bar, so
+   the sheet's bottom — and the 6th item (Sustainability & Water) — ends up hidden
+   behind that bar. dvh measures the VISIBLE viewport, so the sheet's bottom sits
+   at the real bottom of the screen and every item is reachable. env() lifts it
+   clear of the iOS home indicator too. (No effect on desktop, where the tour uses
+   scattered map pins, not this sheet; and none in browsers without a browser bar,
+   where dvh == vh.) */
+@supports (height: 100dvh) {
+  .exploreScreen__tourNav {
+    top: calc(100dvh - 40rem - env(safe-area-inset-bottom, 0px));
+  }
+}

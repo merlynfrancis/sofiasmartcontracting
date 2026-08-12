@@ -32,11 +32,14 @@
   var STEP_COOLDOWN = 350;  // ms after stepping back off an exit screen
   var TOP_DWELL    = 450;   // min ms the top of a phase must be held before leaving
   var TOP_SETTLE_MAX = 1600; // cap on waiting for the app's own settle signal
+  var FWD_THRESHOLD = 600;  // forward swipe intent to leave an explore EXIT screen (touch)
 
   var accum = 0;
   var lastUp = 0;
   var lockedUntil = 0;
   var atTopSince = 0;       // when the current phase's first screen was reached
+  var accumFwd = 0;         // forward (downward-content) swipe accumulator
+  var lastFwd = 0;
 
   function exp() {
     return window.experience || null;
@@ -318,6 +321,38 @@
     return false;
   }
 
+  // FORWARD through an explore phase on touch. On desktop the app's wheel handling
+  // steps through the screens and runs moveToNextPhase() at the end; on mobile the
+  // touch equivalent is unreliable, so explore phases stall part-way (or at the
+  // "Scroll to Phase X" exit) until the button is tapped. This drives the app's own
+  // goToNextStep() — which advances one screen and, past the last screen, calls
+  // moveToNextPhase() itself — one step per gesture, gated by the app's allowScroll
+  // debounce so it can never double-advance with the app's own handling.
+  // Touch-only (see the touchmove handler) so it never fights the desktop wheel path.
+  function onForward(amount) {
+    var now = Date.now();
+    if (now < lockedUntil || blocked()) { accumFwd = 0; return; }
+    var ex = liveExplore(phaseIndex());
+    if (!ex) { accumFwd = 0; return; }               // only explore phases need the rescue
+    if (now - lastFwd > IDLE_RESET) accumFwd = 0;
+    lastFwd = now;
+    accumFwd += amount;
+    if (accumFwd < FWD_THRESHOLD) return;
+    accumFwd = 0;
+    // Only the EXIT screen is rescued. The app steps through the intro/node
+    // screens itself as you scroll; the one place mobile touch never crosses is
+    // the exit ("Scroll to Phase X"), where the app disables scroll and waits for
+    // the button. Firing the button's own moveToNextPhase() there — and NOT
+    // touching the node screens — means we can't double-advance or skip content
+    // on devices where the app's own stepping works.
+    if (!onExitScreen(ex)) return;
+    var e = exp();
+    if (e && typeof e.moveToNextPhase === 'function') {
+      lockedUntil = now + COOLDOWN;
+      e.moveToNextPhase();
+    }
+  }
+
   // Has the phase's first screen actually been ARRIVED at, not just touched in
   // passing? Prefer the app's own settle signal (explore.allowScroll, set ~1s
   // after a step lands) so the screen gets its full beat before we leave the
@@ -377,8 +412,8 @@
     // small swipe while going back needs a huge deliberate drag, which reads as
     // "back doesn't work". A forward drag still zeroes the accumulator, so this
     // can't be triggered by scrolling forward.
-    if (d > 0) onUp(d * 5);
-    else if (d < 0) accum = 0;
+    if (d > 0) { accumFwd = 0; onUp(d * 5); }
+    else if (d < 0) { accum = 0; onForward(-d * 5); }   // drag up == forward (rescues explore exit)
   }, { passive: true });
 
   window.addEventListener('touchend', function () { touchY = null; }, { passive: true });
